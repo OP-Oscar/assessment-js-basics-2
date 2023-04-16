@@ -1,0 +1,61 @@
+Extra Credit: Company Stack Research
+
+Identify 3 software or technology companies the interest you.
+Conduct research to figure out some or all of the elements of each company’s technology stack. Check job openings/job descriptions, engineering blogs, and anything else that may have information about what the company uses to write/build it’s software products.
+
+
+
+-----Response----
+
+The three software or technology companies that interest me are: Google, Apple, and Epic Systems Corporation. I find these companies as vast reaching and great potential for possible jobs in the future. Below are breakdowns based of findings by company.
+
+Google
+TechStack:
+-Some technologies that Google uses are Python, Java, Android SDK, Go, C++, Preact, Angular JS, Kubernetes, TensorFlow. 
+-Examples of how those technologies are used is: Javascript is used for interactive websites, C++ for servers, Python for Youtube, Java for Android OS. For analysis they use Python, in example with job posting for "CPU Physical Design Implementation Engineer" role.
+
+Job Postings:
+-https://careers.google.com/jobs/results/117302890961216198-senior-software-engineer-securityprivacy-core/?distance=50&has_remote=true&hl=en_US&jlo=en_US&location=Texas,%20USA&q=Software&sort_by=date
+-https://careers.google.com/jobs/results/81211714910986950-staff-software-engineer-google-compute/?distance=50&has_remote=true&hl=en_US&jlo=en_US&location=Texas,%20USA&q=Software&sort_by=date
+-https://careers.google.com/jobs/results/94225800825316038-cpu-physical-design-implementation-engineer/?distance=50&has_remote=true&hl=en_US&jlo=en_US&location=Texas,%20USA&q=Software&sort_by=date
+
+
+Resources of findings called out above:
+-https://stackshare.io/google/google
+-https://careerfoundry.com/en/blog/web-development/what-is-a-tech-stack/#what-is-a-tech-stack
+-https://medium.com/@2000sanggami/google-tech-stack-dbcddd6032ff
+
+
+
+Apple
+TechStack:
+-Apple tech stack seems to be tied to: Swift, Objective-C, Cocoa, HTML5, jQuery, and Python.
+-Some things Apple uses to build their iOS software in example are Swift, Objective-C, and Cocoa. There are also teams that work on hardware and example may need to do testing products using automation. In example the silicon software engineers roles.
+
+Job Postings:
+-https://jobs.apple.com/en-us/details/200472220/pre-silicon-software-engineer?team=SFTWR
+-https://jobs.apple.com/en-us/details/200452787/software-engineer?team=HRDWR
+-https://jobs.apple.com/en-us/details/200405522/ios-software-engineer?team=SFTWR
+
+
+Resources of findings called out above:
+-https://stackshare.io/apple/apple
+https://www.crunchbase.com/organization/apple/technology
+
+
+
+
+Epic Systems Corporation
+TechStack:
+-Epic systems corporate tech stack consists of: .Net/C#, Swift, Caché, React, Javascript, Python, Java, Shell, C++, Objective-C, C lang, Perl, Angularjs
+-The languages used chelp establish mobile applications as well are CRMs which are used in many medical enviroments. This helps medical professionals have easier access to patient information in an organized manner. 
+
+Job Postings:
+-https://epic.avature.net/Careers/FolderDetail/Software-Developer/740
+-https://epic.avature.net/Careers/FolderDetail/Technical-Solutions-Engineer/742
+-https://epic.avature.net/Careers/FolderDetail/Windows-Engineer/10727
+
+Resources of findings called out above:
+-https://stackshare.io/epic-games/epic-games
+-https://6sense.com/company/epic-software-development/5ba5f3a67c86660ac130fc27
+-https://careers.epic.com/Jobs/SoftwareDevelopment

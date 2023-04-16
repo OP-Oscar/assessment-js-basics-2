@@ -22,9 +22,10 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 1------------`)
+const greetUser = username => console.log(`Welcom back, ${username}`) // => arrow func taking in 1 param
 
-
-
+greetUser('Andrew') // => invoking greetUser, expected output 'Welcom back, Andrew'
 
 
 //////////////////PROBLEM 2////////////////////
@@ -50,8 +51,13 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+console.log(`------------Problem 2 part1------------`)
+//arrow function with 1 parameter
+// using method includes to check if argument within array.
+function canWeDeliver(zipCode){deliveryAreaZipCodes.includes(zipCode) ? console.log(`We can deliver to zip code ${zipCode}.`) : console.log(`Apologies, we can't deliver to zip code ${zipCode}.`)}
 
-
+canWeDeliver(85204) // => expected output 'We can deliver to zip code 85204.'
+canWeDeliver(77345) // => expected output 'Apologies, we can't deliver to zip code 77345.'
 
 /* 
     Problem 2 Continued
@@ -71,6 +77,21 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+console.log(`------------Problem 2 part2------------`)
+function canWeDeliverTwo(zipCode){  // => function expression
+    for(let val of deliveryAreaZipCodes){  // => looping through zipcode list
+        if(val === zipCode){ // => using iterator to grab elements instead of index
+            return `We can deliver to zip code ${zipCode}.` // => return true if condition met
+        }
+    }
+    return `Apologies, we can't deliver to zip code ${zipCode}.` // => if for loop did not break off then return no delivery avail
+}
+console.log(canWeDeliverTwo(85213)) // => expected output 'We can deliver to zip code 85204.'
+console.log(canWeDeliverTwo(88888)) // => expected output 'Apologies, we can't deliver to zip code 77345.'
+
+// alternate style to problem 2 part 2
+// const canWeDeliverTwo = (element, cb) => cb(element) //=> callback style
+// canWeDeliverTwo(77338,canWeDeliver) //=> printing using callback sytle
 
 
 //////////////////PROBLEM 3////////////////////
@@ -107,8 +128,9 @@ const deals = [
 */
 
 //CODE HERE
-
-
+console.log(`------------Problem 3------------`)
+deals[0].title = deals[0].title.replace('15', '10') // => reassingning first object title to itself and modifying the title 
+console.log(deals) // => console logging deals to show updates
 
 /*
     The restaurant is going to continue its
@@ -124,3 +146,6 @@ const deals = [
 */
 
 //CODE HERE
+console.log(`------------Problem 3 part2------------`)
+deals[1].desc = deals[1].desc.replace('March', 'April').trim() // => reassingning second object desc to itself and modifying the desc string
+console.log(deals) // => console logging deals to show updates

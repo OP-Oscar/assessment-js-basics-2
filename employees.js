@@ -20,8 +20,16 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 1------------`)
+class Employee{
+    constructor(name, shifts){
+        this.name = name,
+        this.shifts = shifts
+    }
+    getSchedule(){console.log(`${this.name} works on ${this.shifts}`)}
+}
 
-
+console.log(`Employee class has been created`)
 
 /*
     Create a new instance of your class.
@@ -34,6 +42,9 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 1 part2------------`)
+const empOne = new Employee('Jess', ["weekday mornings", "weekday afternoons"])
+console.log(empOne)
 
 /*
     Call the `getSchedule` method on the
@@ -41,7 +52,8 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 1 part3------------`)
+empOne.getSchedule() // => expected output is employee shifts
 
 /*
     Make a copy of the empOne object
@@ -56,7 +68,10 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 1 part4------------`)
+const empTwo = {...empOne}
+empTwo.name = "Nick"
+console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -83,8 +98,16 @@
 */
 
 //CODE HERE
-
-
+console.log(`------------Problem 2------------`)
+class Manager extends Employee{
+    constructor(name, shifts,employees){
+        super(name,shifts)
+        this.employees = employees
+    }
+    getEmployees(){console.log(`${this.name} manages: ${this.employees}`)}
+    addEmployees(emp){this.employees.push(emp)}
+}
+console.log(`Manager class which extends from Employee has been created`)
 
 /*
     Create a new instance of your class.
@@ -98,7 +121,10 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 2 part2------------`)
+const manager = new Manager('Winston', ["weekday mornings", "weekday afternoons"], ["Cece", "Schmidt"])
 
+console.log(manager)
 
 /*
     Call the `getEmployees` method on the
@@ -106,6 +132,8 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 2 part3------------`)
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -114,6 +142,9 @@
 */
 
 //CODE HERE 
+console.log(`------------Problem 2 part4------------`)
+manager.addEmployees('Coach')
+console.log(`New employee "Coach" has been added to Winston`)
 
 /*
     Call the `getEmployees` method on the
@@ -122,3 +153,5 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 2 part5------------`)
+manager.getEmployees()

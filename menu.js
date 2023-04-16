@@ -31,8 +31,18 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 1------------`)
 
+const pizza = {
+    name: "Super Supreme", // => name (string)
+    price: 28, // => price (number)
+    category: "entree", // => category (string)
+    populartiy: 80, // => popularity (number)
+    rating: 4, // => rating (number)
+    tags: ['gluten-free', 'delicous', 'multi-toppings', 'adults', 'vegetables-meats'] // => tags (array of strings)
+}
 
+console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +53,8 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 2------------`)
+console.log(pizza.populartiy) // => dot notation to grab popularity of object pizza
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +64,8 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 2 part2------------`)
+console.log(pizza.tags[1])// => dot notation to grab 2nd item in tag array of object pizza
 
 /*
     Third, destructure the price off of the
@@ -63,6 +75,9 @@
 */
 
 //CODE HERE
+console.log(`------------Problem 2 part3------------`)
+let {price : pizzaPrice} = pizza // => destructure to create variable pricePizza from pizza
+console.log(pizzaPrice) // =>printing new variable pizzaPrice
 
 
 /*
@@ -73,7 +88,9 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 2 part4------------`)
+let {category: pizzaCategory} = pizza // => destructure to create variable categoryPizza from pizza
+console.log(pizzaCategory) // =>printing new variable categoryPizza
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +105,49 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 3------------`)
+const foodArr = [{
+    name: "Some Soup", // => name (string)
+    price: 10, // => price (number)
+    category: "entree", // => category (string)
+    populartiy: 70, // => popularity (number)
+    rating: 3, // => rating (number)
+    tags: ['juicy soup', 'simple', 'vegetables', 'seniors', 'healthy'] // => tags (array of strings)
+},
+{
+    name: "burger", // => name (string)
+    price: 15, // => price (number)
+    category: "entree", // => category (string)
+    populartiy: 85, // => popularity (number)
+    rating: 5, // => rating (number)
+    tags: ['meaty', 'deluxe', 'bread', 'kids', 'fresh'] // => tags (array of strings)
+},
+{
+    name: "Marinated Baby Octopus", // => name (string)
+    price: 11, // => price (number)
+    category: "appetizer", // => category (string)
+    populartiy: 92, // => popularity (number)
+    rating: 3, // => rating (number)
+    tags: ['olive oil', 'healthy', 'grilled', 'adults', 'seafood'] // => tags (array of strings)
+},
+{
+    name: "burrito", // => name (string)
+    price: 17, // => price (number)
+    category: "entree", // => category (string)
+    populartiy: 67, // => popularity (number)
+    rating: 2, // => rating (number)
+    tags: ['loaded', 'crunchy', 'Taco Bell', 'kids', 'multi-topping'] // => tags (array of strings)
+},
+{
+    name: "Shrimp Coctel", // => name (string)
+    price: 9, // => price (number)
+    category: "appetizer", // => category (string)
+    populartiy: 88, // => popularity (number)
+    rating: 5, // => rating (number)
+    tags: ['seafood', 'vegetables', 'delicious', 'adults', 'small portion'] // => tags (array of strings)
+}
+]
+console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,9 +163,10 @@
 */
 
 //CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+console.log(`------------Problem 4------------`)
+//filtering to get objects that have 'adults' in tags array
+const filteredFood = foodArr.filter(element => element.tags.includes("adults"))
+console.log(filteredFood) // => printing filteredfood
 
 
 //////////////////PROBLEM 5////////////////////
@@ -149,7 +209,29 @@
 */
 
 //CODE HERE
-
+console.log(`------------Problem 5------------`)
+//function called `filterByProperty` that takes in three arguments: 
+// `property`(string of rating, popularity, or price) 
+// `number` (number that you will compare against)
+// `type` (boolean - 'above' or 'below')
+function filterByProperty( property, number, type){
+        //if condition to ensure arguments match requirements
+        if( (property.toLowerCase() === 'rating' || property.toLowerCase() === 'popularity'|| property.toLowerCase() === 'price') && !isNaN(number) && (type.toLowerCase() === 'above' || type.toLowerCase() === 'below'))
+        {
+            //if arguments match parameter requirement, checking which rule to apply
+            if(type.toLowerCase() === 'above'  ){
+                //assigning filtered array for above requirement
+                const filteredFoodArray = foodArr.filter(element => element[property.toLowerCase()] > number)
+                return filteredFoodArray
+            }else if (type.toLowerCase() === 'below'){
+                 //assigning filtered array for below requirement
+                const filteredFoodArray = foodArr.filter(element => element[property.toLowerCase()] < number)
+                return filteredFoodArray
+        }
+        }else 
+        //message to user to put correct arguments in function
+        return `Property should be: rating or popularity or price \nNumber should be: an integer \nType should be: above or below`
+    }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +241,5 @@
 */
 
 //CODE HERE
+//invoking filterByProperty
+console.log(filterByProperty('rating', 3, 'above'))
